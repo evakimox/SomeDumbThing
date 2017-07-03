@@ -35,6 +35,28 @@ friction =0.1;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///creating character's heart
+instance_create(x,y,obj_heart);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -54,16 +76,16 @@ friction =0.1;
           <argument>
             <kind>1</kind>
             <string>///left, right, up, down thing
-if(keyboard_check_pressed(vk_left)){
+if(keyboard_check(vk_left)){
     hspeed = -movementspd;
 }
-if(keyboard_check_pressed(vk_right)){
+if(keyboard_check(vk_right)){
     hspeed = movementspd;
 }
-if(keyboard_check_pressed(vk_up)){
+if(keyboard_check(vk_up)){
     vspeed = -movementspd;
 }
-if(keyboard_check_pressed(vk_down)){
+if(keyboard_check(vk_down)){
     vspeed = movementspd;
 }
 </string>
@@ -146,6 +168,34 @@ else{
             <string>///lay an egg after press G
 if(keyboard_check_released(ord('G'))){
     instance_create(x,y,obj_bomb);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///control heart position, make them consistant
+
+if(place_meeting(x,y,obj_heart)){
+    with(obj_heart){
+        x = obj_player.x;
+        y = obj_player.y;    
+    }
 }
 </string>
           </argument>

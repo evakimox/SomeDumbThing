@@ -7,13 +7,13 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_gametitle</sprite>
     <sprites name="profile">
       <sprite>sprites\spr_wilde1</sprite>
       <sprite>sprites\spr_johanna1</sprite>
       <sprite>sprites\spr_zhang1</sprite>
       <sprite>sprites\spr_turing1</sprite>
     </sprites>
-    <sprite>sprites\spr_gametitle</sprite>
     <sprites name="anime_sprites">
       <sprite>sprites\spr_johanna</sprite>
       <sprite>sprites\spr_wilde</sprite>
@@ -21,6 +21,9 @@
       <sprite>sprites\spr_bomb</sprite>
       <sprite>sprites\spr_zhang</sprite>
     </sprites>
+    <sprite>sprites\spr_heart</sprite>
+    <sprite>sprites\spr_sb</sprite>
+    <sprite>sprites\spr_warning</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_choose_char</background>
@@ -28,12 +31,22 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_charSelector</object>
-    <object>objects\obj_title</object>
     <object>objects\obj_bomb</object>
-    <object>objects\obj_bombtimer</object>
+    <object>objects\obj_heart</object>
+    <object>objects\obj_enemy</object>
+    <objects name="ctrl">
+      <object>objects\obj_stagectrl</object>
+      <object>objects\obj_bombtimer</object>
+      <object>objects\obj_charSelector</object>
+    </objects>
+    <objects name="wordy">
+      <object>objects\obj_title</object>
+      <object>objects\obj_gameTitle</object>
+      <object>objects\obj_warning</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_preStart</room>
     <room>rooms\rm_start</room>
     <room>rooms\rm_stage</room>
   </rooms>
