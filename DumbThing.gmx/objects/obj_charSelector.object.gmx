@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -27,7 +27,15 @@
             <kind>1</kind>
             <string>///put all 4 person's profile in a list
 profile_index = 0;
-char_profile_list[] = [spr_rose1, spr_turing1, spr_wilde1,spr_johanna1];
+char_profile_list[0] = spr_zhang1;
+char_profile_list[1] = spr_turing1;
+char_profile_list[2] = spr_wilde1;
+char_profile_list[3] = spr_johanna1;
+
+global.char_list[0] = spr_zhang;
+global.char_list[1] = spr_turing;
+global.char_list[2] = spr_wilde;
+global.char_list[3] = spr_johanna;
 </string>
           </argument>
         </arguments>
@@ -50,10 +58,21 @@ char_profile_list[] = [spr_rose1, spr_turing1, spr_wilde1,spr_johanna1];
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///display char profile
+            <string>///confirm selected display accordingly
 ProfileIndex = abs(profile_index)%4;
 sprite_index = char_profile_list[ProfileIndex];
+global.playerIndex = ProfileIndex;
 
+if(keyboard_check_released(vk_enter)){
+    room_goto(rm_stage);
+}
+
+/*
+char_profile_list[0] = spr_zhang1;
+char_profile_list[1] = spr_turing1;
+char_profile_list[2] = spr_wilde1;
+char_profile_list[3] = spr_johanna1;
+*/
 </string>
           </argument>
         </arguments>

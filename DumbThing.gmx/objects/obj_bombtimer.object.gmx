@@ -25,12 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///inherit the sprite defined in previous room
-sprite_index = global.char_list[global.playerIndex];
-image_speed = 0;
-
-movementspd = 4;
-friction =0.1;
+            <string>upperLimit = 10;
+count = 30;
+now = upperLimit;
 </string>
           </argument>
         </arguments>
@@ -53,52 +50,39 @@ friction =0.1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///left, right, up, down thing
-if(keyboard_check_pressed(vk_left)){
-    hspeed = -movementspd;
-}
-if(keyboard_check_pressed(vk_right)){
-    hspeed = movementspd;
-}
-if(keyboard_check_pressed(vk_up)){
-    vspeed = -movementspd;
-}
-if(keyboard_check_pressed(vk_down)){
-    vspeed = movementspd;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///control image walking display
+            <string>///count down and ignite after time out
 
-if(speed!=0){
-    image_speed = 0.2;
+if(count&gt;0){
+    count -=1;
 }
 else{
-    image_speed = 0;
-    image_index = 0;
+    count = 30;
+    now -=1 ;
+}
+if(now&lt;0){
+    if(instance_exists(obj_bomb)){
+        with(obj_bomb){
+            if(image_alpha&gt;0.05){
+                image_xscale = image_xscale * 1.15;
+                image_yscale = image_yscale * 1.15;
+                image_alpha -= 0.05;
+            }
+            else{
+                instance_destroy();
+            }
+        }
+    }
+    else{
+        instance_create(x,y,obj_bombtimer);
+        instance_destroy();
+    }
 }
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -115,37 +99,9 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///movement speed change with Z
-
-if(keyboard_check(ord('Z'))){
-    movementspd = 2;
-}
-else{
-    movementspd = 4;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///lay an egg after press G
-if(keyboard_check_released(ord('G'))){
-    instance_create(x,y,obj_bomb);
+            <string>time_left = string(now);
+if(now&gt;=0){
+    draw_text(400,30,time_left);
 }
 </string>
           </argument>
