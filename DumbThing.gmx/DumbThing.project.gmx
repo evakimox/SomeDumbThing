@@ -20,6 +20,8 @@
       <sprite>sprites\spr_turing</sprite>
       <sprite>sprites\spr_bomb</sprite>
       <sprite>sprites\spr_zhang</sprite>
+      <sprite>sprites\spr_fireStarter</sprite>
+      <sprite>sprites\spr_datPaper</sprite>
     </sprites>
     <sprite>sprites\spr_heart</sprite>
     <sprite>sprites\spr_sb</sprite>
@@ -29,6 +31,12 @@
     <background>background\bg_choose_char</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_SetupCharImage.gml</script>
+    <script>scripts\scr_PlayerCollisionWithEnemy.gml</script>
+    <script>scripts\scr_ThumbCollisionWithEnemy.gml</script>
+    <script>scripts\scr_CreateShabiEnemy.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_bomb</object>
