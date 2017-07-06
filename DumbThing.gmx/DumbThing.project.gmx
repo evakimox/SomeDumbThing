@@ -24,8 +24,16 @@
       <sprite>sprites\spr_datPaper</sprite>
     </sprites>
     <sprite>sprites\spr_heart</sprite>
-    <sprite>sprites\spr_sb</sprite>
     <sprite>sprites\spr_warning</sprite>
+    <sprite>sprites\spr_CreepDescription</sprite>
+    <sprites name="enemy">
+      <sprite>sprites\spr_sb</sprite>
+      <sprite>sprites\spr_gd</sprite>
+      <sprite>sprites\spr_yk</sprite>
+      <sprite>sprites\spr_xm</sprite>
+      <sprite>sprites\spr_shit</sprite>
+      <sprite>sprites\spr_bullshit</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_choose_char</background>
@@ -51,7 +59,9 @@
       <object>objects\obj_title</object>
       <object>objects\obj_gameTitle</object>
       <object>objects\obj_warning</object>
+      <object>objects\obj_des</object>
     </objects>
+    <object>objects\obj_bullet</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_preStart</room>

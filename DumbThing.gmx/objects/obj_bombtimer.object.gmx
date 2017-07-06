@@ -103,8 +103,7 @@ if(now&lt;0){
 
 time_left = string(now);
 if(now&gt;=0){
-    
-    draw_text(450,30,time_left);
+    draw_text(x,y,time_left);
 }
 </string>
           </argument>
