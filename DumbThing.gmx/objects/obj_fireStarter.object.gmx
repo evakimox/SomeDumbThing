@@ -66,12 +66,29 @@ if(position_meeting(mouse_x,mouse_y,obj_fireStarter)){
         follow = 1;
         x_offset = x-mouse_x;
         y_offset = y-mouse_y;
-    }
-    if(follow){
-        if(mouse_check_button(mb_left)){image_index = 0;}
-        else{image_index = 1;}
+        //while selected change mask to fire only
+        mask_index = spr_starterFire;
     }
 }
+
+if(follow){
+    if(mouse_check_button(mb_left)){
+        image_index = 0;
+    }
+    else{image_index = 1;}
+    
+    if(place_meeting(x,y,obj_file)){
+        if(mouse_check_button_pressed(mb_left)){
+            fireball = instance_create(x,y,obj_firespot);
+            bigness = (50+random(50))/100;
+            fireball.image_xscale = bigness;
+            fireball.image_yscale = bigness;
+        }
+    }
+}
+
+
+
 </string>
           </argument>
         </arguments>

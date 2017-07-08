@@ -21,6 +21,7 @@
       <sprite>sprites\spr_bomb</sprite>
       <sprite>sprites\spr_zhang</sprite>
       <sprite>sprites\spr_fireStarter</sprite>
+      <sprite>sprites\spr_starterFire</sprite>
       <sprite>sprites\spr_datPaper</sprite>
     </sprites>
     <sprite>sprites\spr_heart</sprite>
@@ -35,6 +36,7 @@
       <sprite>sprites\spr_bullshit</sprite>
     </sprites>
     <sprite>sprites\spr_achieve</sprite>
+    <sprite>sprites\spr_fire</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_choose_char</background>
@@ -56,6 +58,7 @@
       <object>objects\obj_bombtimer</object>
       <object>objects\obj_charSelector</object>
       <object>objects\obj_AchieveptsGeneraotr</object>
+      <object>objects\obj_resultPageCtrl</object>
     </objects>
     <objects name="wordy">
       <object>objects\obj_title</object>
@@ -67,6 +70,8 @@
     <object>objects\obj_AchievePts</object>
     <object>objects\obj_fireStarter</object>
     <object>objects\obj_file</object>
+    <object>objects\obj_firespot</object>
+    <object>objects\obj_paperpt</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_result</room>
