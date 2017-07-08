@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>///initialize states, alarm length
 
+
+
 stage_state = states.stage1;
 
 alarm[0] = 30;

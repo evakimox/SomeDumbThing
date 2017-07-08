@@ -34,6 +34,7 @@
       <sprite>sprites\spr_shit</sprite>
       <sprite>sprites\spr_bullshit</sprite>
     </sprites>
+    <sprite>sprites\spr_achieve</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_choose_char</background>
@@ -54,6 +55,7 @@
       <object>objects\obj_stagectrl</object>
       <object>objects\obj_bombtimer</object>
       <object>objects\obj_charSelector</object>
+      <object>objects\obj_AchieveptsGeneraotr</object>
     </objects>
     <objects name="wordy">
       <object>objects\obj_title</object>
@@ -62,8 +64,12 @@
       <object>objects\obj_des</object>
     </objects>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_AchievePts</object>
+    <object>objects\obj_fireStarter</object>
+    <object>objects\obj_file</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_result</room>
     <room>rooms\rm_preStart</room>
     <room>rooms\rm_start</room>
     <room>rooms\rm_stage</room>
