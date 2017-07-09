@@ -74,8 +74,8 @@
     <object>objects\obj_paperpt</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_result</room>
     <room>rooms\rm_preStart</room>
+    <room>rooms\rm_result</room>
     <room>rooms\rm_start</room>
     <room>rooms\rm_stage</room>
   </rooms>

@@ -1,8 +1,7 @@
 
 for(i=0;i<argument0;i++){
-    shabi = instance_create(-10+40*i,y,obj_enemy);
-    //shabi.hspeed = 3;
-    x+=40;
+    global.typeguai = argument1;
+    shabi = instance_create((i+1)*(480/(argument0+1)),0,obj_enemy);
+    shabi.vspeed = 1;
 }
 
-y+=40;

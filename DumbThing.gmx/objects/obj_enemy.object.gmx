@@ -25,19 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///choose which to display
-sprsrcIndex[0] = spr_sb;
-sprsrcIndex[1] = spr_yk;
-sprsrcIndex[2] = spr_xm;
-sprsrcIndex[3] = spr_gd;
+            <string>
+sprIndex[0] = spr_sb;
+sprIndex[1] = spr_yk;
+sprIndex[2] = spr_xm;
+sprIndex[3] = spr_gd;
 
-if(instance_exists(obj_stagectrl)){
-    //listen to stage ctrol
-}
-else{
-    global.typeguai = 0;
-}
-sprite_index = sprsrcIndex[global.typeguai];
+typeIndex = global.typeguai;
+sprite_index = sprIndex[typeIndex];
+
+
+
 </string>
           </argument>
         </arguments>

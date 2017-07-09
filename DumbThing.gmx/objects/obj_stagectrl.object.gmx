@@ -62,9 +62,9 @@ alarm[4] = 150;
             <string>///this alarm called every 2 sec
 
 switch (stage_state){
-    case states.stage1: scr_CreateShabiEnemy(1); break;
-    case states.stage2: scr_CreateShabiEnemy(2); break;
-    case states.stage3: scr_CreateShabiEnemy(3); break;
+    case states.stage1: scr_CreateShabiEnemy(1,0); break;
+    case states.stage2: scr_CreateShabiEnemy(2,1); break;
+    case states.stage3: scr_CreateShabiEnemy(3,1); break;
 }
 
 </string>

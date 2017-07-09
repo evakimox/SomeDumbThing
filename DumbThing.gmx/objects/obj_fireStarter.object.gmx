@@ -83,6 +83,7 @@ if(follow){
             bigness = (50+random(50))/100;
             fireball.image_xscale = bigness;
             fireball.image_yscale = bigness;
+            fireball.image_speed = (random(50)+50)/300;
         }
     }
 }
