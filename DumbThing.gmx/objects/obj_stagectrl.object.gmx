@@ -25,17 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///initialize states, alarm length
-
-
+            <string>///initialize states, alarm length, and initial guai
 
 stage_state = states.stage1;
 
-alarm[0] = 30;
-alarm[1] = 60;
-alarm[2] = 90;
-alarm[3] = 120;
-alarm[4] = 150;
+scr_CreateShabiEnemy(3,0);
 
 </string>
           </argument>
@@ -59,12 +53,12 @@ alarm[4] = 150;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///this alarm called every 2 sec
+            <string>///this alarm called every 20 sec
 
 switch (stage_state){
-    case states.stage1: scr_CreateShabiEnemy(1,0); break;
-    case states.stage2: scr_CreateShabiEnemy(2,1); break;
-    case states.stage3: scr_CreateShabiEnemy(3,1); break;
+    case states.stage1:  scr_CreateShabiEnemy(1,3); break;
+    case states.stage2:  break;
+    case states.stage3:  break;
 }
 
 </string>
@@ -89,10 +83,9 @@ switch (stage_state){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>///set alarm1 20 sec
 if(alarm[1]==-1){
-    alarm[1] = 60;
-    stage_state = states.stage3;
+    alarm[1] = 600;
 }
 </string>
           </argument>

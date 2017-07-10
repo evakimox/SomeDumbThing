@@ -47,6 +47,14 @@
     <script>scripts\scr_PlayerCollisionWithEnemy.gml</script>
     <script>scripts\scr_ThumbCollisionWithEnemy.gml</script>
     <script>scripts\scr_CreateShabiEnemy.gml</script>
+    <scripts name="danmaku">
+      <script>scripts\scr_CreateShitFanShape.gml</script>
+      <script>scripts\scr_CreateBullshitFanshape.gml</script>
+    </scripts>
+    <scripts name="achievePts">
+      <script>scripts\scr_zigzag.gml</script>
+      <script>scripts\scr_circle.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>

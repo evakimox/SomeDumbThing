@@ -27,12 +27,8 @@
             <kind>1</kind>
             <string>///create achievement points at wanted place
 
-pts[0] = instance_create(100,100,obj_AchievePts);
-pts[1] = instance_create(100,500,obj_AchievePts);
 
-flags[0] = 0;
-flags[1] = 0;
-
+scr_circle(12);
 
 </string>
           </argument>
@@ -73,12 +69,12 @@ for(i=0;i&lt;array_length_1d(pts);i++){
     }     
 }
 
-stage_clear = 1;
+checkpts_clear = 1;
 for(i=0;i&lt;array_length_1d(flags);i++){
-    stage_clear = stage_clear&amp;&amp;flags[i];
+    checkpts_clear = checkpts_clear&amp;&amp;flags[i];
 }
 
-if(stage_clear){
+if(checkpts_clear){
     global.stage_clear = 1;
 }
 
