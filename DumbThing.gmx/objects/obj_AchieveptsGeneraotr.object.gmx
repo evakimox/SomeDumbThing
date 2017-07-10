@@ -28,7 +28,7 @@
             <string>///create achievement points at wanted place
 
 
-scr_circle(12);
+scr_circle(1);
 
 </string>
           </argument>

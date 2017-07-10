@@ -13,7 +13,7 @@ if(argument0>1){
 else{
     pts[0] = instance_create(240,360,obj_AchievePts);
     flags[0] = 0;
-    return;
+    exit;
 }
 
 for(i=0;i<argument0;i++){
