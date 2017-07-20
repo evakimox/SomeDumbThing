@@ -28,6 +28,10 @@
             <string>upperLimit = 10;
 count = 30;
 now = upperLimit;
+
+
+
+
 </string>
           </argument>
         </arguments>
@@ -51,6 +55,9 @@ now = upperLimit;
           <argument>
             <kind>1</kind>
             <string>///count down and ignite after time out
+if(!instance_exists(obj_AchieveptsGeneraotr)){
+    instance_create(x,y,obj_AchieveptsGeneraotr);
+}
 
 if(count&gt;0){
     count -=1;
@@ -73,7 +80,19 @@ if(now&lt;0){
         }
         if(global.stage_clear){
             //should be an animation transition to result room
-            instance_create(x,y,obj_fireStarter);
+            global.tries +=1;
+            if(global.stage_clear&amp;&amp;instance_exists(obj_AchievePts)){
+                with(obj_AchievePts){
+                    instance_destroy();           
+                }
+                if(instance_exists(obj_AchieveptsGeneraotr)){
+                    with(obj_AchieveptsGeneraotr){
+                        instance_destroy();
+                    }
+                    global.AcheMode+=1;
+                }
+            global.stage_clear = 0;
+            }
         }
     }
     else{
@@ -81,6 +100,12 @@ if(now&lt;0){
         instance_destroy();
     }
 }
+
+if(global.tries &gt;=2){
+                room_goto(rm_result);
+            }
+
+
 </string>
           </argument>
         </arguments>
@@ -108,6 +133,7 @@ if(now&lt;0){
 time_left = string(now);
 if(now&gt;=0){
     draw_text(x,y,time_left);
+    draw_text(x,y+30,string(global.AcheMode));
 }
 </string>
           </argument>

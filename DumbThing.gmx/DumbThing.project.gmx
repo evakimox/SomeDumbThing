@@ -54,6 +54,7 @@
     <scripts name="achievePts">
       <script>scripts\scr_zigzag.gml</script>
       <script>scripts\scr_circle.gml</script>
+      <script>scripts\scr_archievement.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -64,8 +65,8 @@
     <objects name="ctrl">
       <object>objects\obj_stagectrl</object>
       <object>objects\obj_bombtimer</object>
-      <object>objects\obj_charSelector</object>
       <object>objects\obj_AchieveptsGeneraotr</object>
+      <object>objects\obj_charSelector</object>
       <object>objects\obj_resultPageCtrl</object>
     </objects>
     <objects name="wordy">
